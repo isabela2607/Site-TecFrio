@@ -1,0 +1,395 @@
+/* Paleta de cores */
+:root {
+    --verde-claro: #00FAB7;
+    --azul-marinho: #009AFA;
+    --azul-esverdeado-escuro: #00E9FA;
+    --verde-claro-forte-fazer-orçamento: #00FA62;
+    --azul-escuro-botão-saiba: #004BFA;
+    --azul-esverdeado-claro: #53EFFA;
+    --branco: #ffffff;
+    --cinza: rgb(92, 92, 92);
+    --fundo-header-contato-e-duvidas: #7fc3ed;
+
+}
+
+
+
+
+
+/* Elementos da página em geral */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Merriweather", serif;
+}
+
+/* Configurando body */
+body {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+/* HEADER */
+/* Configurando cor da logo (nome da empresa) */
+.nome-empresa {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ffffff;
+    padding-top: 100px;
+}
+
+.nome-empresa h1 {
+    font-size: 120px;
+    padding-bottom: 200px;
+    margin-left: 200px;
+    color: var(--azul-escuro);
+}
+
+.nome-empresa h2 {
+    font-size: 1.5em;
+    padding-bottom: 20px;
+}
+
+.nome-empresa h3 {
+    font-size: 2em;
+    padding-bottom: 60px;
+}
+
+/* Elementos header */
+header {
+    width: 100vw; /* Ocupa 100% da largura da janela */
+    height: 100vh; /* Ocupa 90% da altura disponível */
+    background-color: var(--fundo-header);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)) var(--fundo-header);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    margin-left: calc((100vw - 100%) / -2); /* Centraliza o fundo */
+    margin-right: calc((100vw - 100%) / -2); /* Centraliza o fundo */
+    box-sizing: border-box;
+}
+
+a:hover{
+    font-size: 1.01em;
+}
+
+.saiba-bottom {
+    background-color: #004BFA;
+    padding-bottom: 10px;
+    padding-top: 50px;
+    border-end-end-radius: 50px;
+    border-top-left-radius: 50px;
+    padding: 20px;
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.saiba-bottom a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Item 5 (cadastrar/entrar) do html */
+.menu a:nth-child(6) {
+    background-color: #00FA62;
+    position: relative;
+    padding: 30px;
+    border-radius: 30%;
+    margin-left: 2em;
+    text-align: center;
+}
+
+/* Conteiner menu, com exeção logo (floco de neve) */
+.menu:not(.imagem-logo) {
+    width: 100%;
+    position: fixed;
+    flex-direction: row;
+    background-color: white;
+    top: 0;
+    left: 0px;
+    padding: 20px;
+    z-index: 1000;
+    padding-left: 800px;
+}
+
+/* logo (floco de neve) */
+.imagem-logo {
+    position: fixed;
+    flex-direction: row;
+    background-color: white;
+    top: 0;
+    left: 0px;
+    padding: 10px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+}
+
+/* Itens do menu */
+.menu a:not(.imagem-logo) {
+    padding-left: 40px;
+    color: #000000;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* Main */
+/* Estilos para as seções */
+section {
+    width: 100vw; /* Ocupa 100% da largura da janela */
+    align-items: center;
+    height: 100vh; /* Ocupa 90% da altura disponível */
+    flex-direction: row;
+    padding: 0 20px;
+    margin-left: calc((100vw - 100%) / -2); /* Centraliza o fundo */
+    margin-right: calc((100vw - 100%) / -2); /* Centraliza o fundo */
+    box-sizing: border-box;
+}
+
+/* Estiliza o título das seções */
+section h2 {
+    font-size: 50px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+}
+
+section p {
+    justify-content: space-between;
+    padding-bottom: 15px;
+    font-size: 20px;
+}
+
+.sobre {
+    background-color: var(--branco);
+    height: 70vh; /* Ocupa 80% da altura disponível */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 150px; /* Ajusta o padding conforme necessário */
+}
+
+.sobre img {
+    height: 90%;
+    width: 500px;
+    margin-right: 60px;
+    border-radius: 15px;
+}
+
+.sobre .texto-sobre {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    text-align: justify;
+}
+
+.servicos {
+    background-color: white;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    margin-bottom: 100px;
+   
+}
+
+
+.servicos h2 {
+    margin-bottom: 40px;
+    color: #000000;
+}
+
+.servicos .grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1240px;
+}
+
+.servicos .grid-item {
+    background-color: var(--cinza);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.servicos .grid-item h3 {
+    margin-bottom: 10px;
+}
+
+.duvidas {
+    background-color:#a1dbff;
+    color:black;
+    padding: 50px;
+    height: 110vh; /* Ocupa 80% da altura disponível */
+}
+
+.duvidas h3 {
+    font-size: 20px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    background-color: var(--verde-claro);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.duvidas h3.active {
+    background-color:#009AFA;
+}
+
+
+.duvidas p {
+    font-size: 1em;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 2px;
+}
+
+
+.contato{
+    background-color: #7fc3ed;
+    display: flex;
+    height: 80vh; /* Ocupa 80% da altura disponível */
+    
+}
+
+.dados{
+    margin-right:400px ;
+    margin-bottom: 80px;
+    padding-left: 200px;
+}
+.dados h3{
+    padding-top: 30px;
+}
+
+.mapsgoogle{
+    margin-right: 100px;
+    margin-top: 20px;
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.mapsgoogle iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+
+footer{  
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    padding: 10px;
+    width: 100vw;
+    margin-left: calc((100vw - 100%) / -2);
+    margin-right: calc((40vw - 100%) / -2);
+    box-sizing: border-box;
+}
+
+.voltar-topo {
+    background-color: var(--azul-marinho);
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-left: 30px;
+}
+
+.voltar-topo:hover {
+    background-color: var(--azul-escuro);
+}
+
+.avaliacao{
+    width: 100vw; /* Ocupa 100% da largura da janela */
+    height: 60vh; /* Ocupa 30% da altura disponível */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    margin-left: calc((100vw - 100%) / -2); /* Centraliza o fundo */
+    margin-right: calc((100vw - 100%) / -2); /* Centraliza o fundo */
+    box-sizing: border-box;  
+    justify-items: center; 
+}
+
+.avaliacao h3{
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+.formulario-contato {
+    background-color:rgb(234, 234, 234);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 600px;
+    margin:80px auto;
+
+}
+
+.formulario-contato form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-contato label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--azul-marinho);
+}
+
+.formulario-contato input, .formulario-contato textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--cinza-escuro);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.formulario-contato button {
+    padding: 0.5rem;
+    background-color: var(--verde-claro-forte);
+    color: var(--branco);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.formulario-contato button:hover {
+    background-color: var(--azul-marinho);
+}
